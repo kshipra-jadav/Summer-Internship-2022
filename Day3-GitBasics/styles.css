@@ -4,6 +4,7 @@
     margin: 0px;
     font-family: "Poppins", serif;
     overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 #content {
@@ -23,12 +24,13 @@
     border-color: white;
     border-right-color: black;
     border-width: 8px;
+
 }
 
 #nav h1 {
     margin: 15px;
     text-align: center;
-
+    text-overflow: ellipsis;
 }
 
 .main {
@@ -38,6 +40,8 @@
 
 .links {
     margin-top: 40px;
+    white-space: initial;
+    overflow-wrap: break-word;
 }
 
 .list {
@@ -65,4 +69,68 @@
 img {
     width: 50%;
     height: 50%;
+}
+
+/* Day 3 Changes */
+
+@media (max-width: 900px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        /*background-color: yellow;*/
+    }
+
+    #nav {
+        margin-top: 20px;
+        width: 90vw;
+        height: 30vh;
+        overflow: auto;
+        border-style: double;
+        border-color: white;
+        border-bottom-color: black;
+        border-width: 8px;
+        padding: 20px;
+    }
+
+    #content {
+        width: 95vw;
+        height: 60vh;
+    }
+
+    .list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+
+    }
+
+}
+
+@media (max-width: 700px) {
+    body {
+        background-color: #121212;
+        color: white;
+    }
+    #nav {
+        width: 90vw;
+        border-color: #121212;
+        border-bottom-color: white;
+    }
+
+    #content {
+        width: 95vh;
+    }
+
+    .content-heading {
+        font-size: 2rem;
+        background-color: white;
+        color: #121212;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .link {
+        color: white;
+    }
 }
