@@ -37,5 +37,5 @@ Difference between **.** and **..**
 + `git pull` internally executes two commands - `git fetch` and `git merge` which fetches objects from remote branch __and__ merge them with the local code
 
 ## Git Structure 
-(https://i.imgur.com/qHzslyt.png)
+<img src="https://i.imgur.com/qHzslyt.png">
 
