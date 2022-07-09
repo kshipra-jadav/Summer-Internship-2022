@@ -6,3 +6,7 @@
 * Whenever a blog is removed, it is also removed from the local storage.
 
 ## Project Video :- 
+
+
+https://user-images.githubusercontent.com/84441419/178094974-f003c3b7-7396-4ecc-ab73-7f608e01dc10.mp4
+
