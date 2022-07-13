@@ -98,30 +98,30 @@ p1.display() // Output:- Kshipra -- Jadav
 1. Define the types in typescript for the given following JavaScript code.
 ```ts
 type TODO = {
-    name: string,
-    description: string,
-    done: boolean
+   name: string,
+   description: string,
+   done: boolean
 }
 
 let todos: Array<TODO> = [];
 
 function add(name: string, description: string): number {
-    return todos.push({name: name, description: description, done: false});
+   return todos.push({name: name, description: description, done: false});
 }
 
 function remove(index: number): Array<TODO> {
-    return todos.splice(index, 1);
+   return todos.splice(index, 1);
 }
 
 function list(): void {
-    todos.forEach(function (todo, index) {
-        console.log(index + " -" + todo.name);
-    });
+   todos.forEach(function (todo: TODO, index: number) {
+      console.log(index + " -" + todo.name);
+   });
 }
 
 function update(index: number, name: string, description: string): TODO {
-    todos[index].name = name;
-    todos[index].description = description;
-    return todos[index];
+   todos[index].name = name;
+   todos[index].description = description;
+   return todos[index];
 }
 ```
