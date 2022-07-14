@@ -12,7 +12,7 @@ const options: KeyframeAnimationOptions = {
     direction: "alternate"
 }
 
-// @ts-ignore
+
 const executeAnimations = async (): Promise<void> => {
 
     let anim1: Animation = img1.animate(keyframes, options)
