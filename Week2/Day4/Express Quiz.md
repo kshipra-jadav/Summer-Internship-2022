@@ -66,7 +66,8 @@
     * The server then responds with a response.
     * That response can contain the data requested or an error message if the data is not found.
     * The HTTP communication is better explained by the following diagram.
-<img src="https://d1avenlh0i1xmr.cloudfront.net/695bb7d8-d242-47a8-ab92-bc72225323df/what-is-http---teachoo.jpg" width="800" height="600" alt="">
+![what-is-http---teachoo](https://user-images.githubusercontent.com/84441419/179136208-f9a57f56-464d-4c73-b4c0-6e32f906ce12.jpg)
+
    
 11. What is Middleware in ExpressJS.
     * Middleware in Express is used for two things.
