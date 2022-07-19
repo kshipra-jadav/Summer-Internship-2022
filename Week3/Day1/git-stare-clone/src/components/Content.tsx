@@ -19,8 +19,11 @@ const Content: FC = (): JSX.Element => {
 		try {
 			const myEventResponse: AxiosResponse<Event[]> = await axios.get(`https://api.github.com/users/${ inputUserName }/events`)
 			const myUserResponse: AxiosResponse = await axios.get(`https://api.github.com/users/${ inputUserName }`)
+			
 			setEventResponse(myEventResponse.data)
 			setUserResponse(myUserResponse.data)
+			
+			
 		} catch (e) {
 			if (axios.isAxiosError(e)) {
 				console.log('Bad username')
