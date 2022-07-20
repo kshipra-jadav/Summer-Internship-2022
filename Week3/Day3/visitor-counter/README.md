@@ -6,3 +6,7 @@
 - The value of the total loads of the page is stored in Redis.
 
 ## Presentation Video
+
+
+https://user-images.githubusercontent.com/84441419/180031210-49cefb56-f259-4147-b3d8-d2ff6848471e.mp4
+
