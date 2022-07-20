@@ -48,9 +48,25 @@
     width: 400px;
     display: flex;
     border: solid 5px black;
+    position: relative;
 }
+
+
 
 .img {
     height: 267px;
     width: 400px;
 }
+
+.hoverBtns {
+    width: 50px;
+    height: 267px;
+    background-color: red;
+    position: absolute;
+    z-index: 10000;
+    display: block;
+}
+
+/*.mainContent:hover  .hoverBtns {*/
+/*    display: block;*/
+/*}*/

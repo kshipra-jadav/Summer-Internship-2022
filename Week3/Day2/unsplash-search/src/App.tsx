@@ -1,14 +1,16 @@
-import React, { KeyboardEvent, KeyboardEventHandler, useEffect, useState } from 'react'
+import React, { KeyboardEvent, KeyboardEventHandler, MouseEventHandler, MouseEvent, useEffect, useState } from 'react'
 import './App.css'
 import axios, { AxiosResponse } from "axios"
 import { ImageResponse } from "./types"
+const JSONData: ImageResponse = require('./data.json')
 
 function App() {
 	useEffect(() => {
 		document.title = "Unsplash Images Search"
+		setData(JSONData)
+		
 	}, [])
 	const [data, setData] = useState<ImageResponse>()
-	
 	const handleEnter: KeyboardEventHandler = async (e: KeyboardEvent<HTMLInputElement>) => {
 		if (e.code !== "Enter") return
 		const searchTerm = e.target.value
@@ -29,6 +31,9 @@ function App() {
 		}
 		
 	}
+	const handleHoverStart: MouseEventHandler = (e: MouseEvent<HTMLDivElement> & {target: Element }) => {
+		console.log(e.target.childNodes[0])
+	}
 	return (
 		<>
 			<div className="main">
@@ -41,11 +46,12 @@ function App() {
 						       onKeyDown={ handleEnter }/>
 					</div>
 				</div>
-				<div className="mainContent">
+				<div className="mainContent" >
 					{
 						data?.results.map(item => {
 							return (
-								<div className="imgContainer">
+								<div className="imgContainer" onMouseEnter={handleHoverStart}>
+									<div className="hoverBtns" >Btn</div>
 									<img src = {item.urls.small} alt="" className="img"/>
 								</div>
 							)
